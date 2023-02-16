@@ -1,0 +1,10 @@
+What is Node.js?
+    - Node.js is a program that embeds V8 in a standalone way, outside of a web browser. This means your computer can understand and run JavaScript on its own. A web server is just a computer somewhere, so Node allows you to write a web server in JS as well as a client application. Node.js lets you build everything out of JS, including the server itself. The attractiveness of the event-driven (asynchronous) style of programming comes is that it lets you service numerous requests simultaneously using a single thread.
+
+What is Express?
+    - Express is a very DIY framework for Node.js. Express is nice because it is one of the most popular frameworks, so lots of services like Stripe (payment processing) offer great support to implement them in Express. A fairly flexible/robust web server that runs in node.
+
+Why we chose Node Express for Rocket Elevators?
+    - The simplicity of it's usage.
+    - Already contains alot of support.
+    - The asynchronous style of programming. That let's us run multiple request simultaneously.
