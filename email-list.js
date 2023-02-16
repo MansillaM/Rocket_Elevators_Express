@@ -5,12 +5,12 @@ const app = express();
 const port = process.env.PORT;
 
 //import all agents from top-agents.js
-var topAgents = require('./top-agents');
+var data = require('./data');
 
 //js to get email from every agents
 let text = "";
-for (let a = 0; a < topAgents.length; a++) {
-    text += topAgents[a].email + ", ";
+for (let a = 0; a < data.topAgents.length; a++) {
+    text += data.topAgents[a].email + ", ";
 };
 
 app.get('/email-list', (req, res) => {

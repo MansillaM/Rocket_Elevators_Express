@@ -5,11 +5,11 @@ const app = express();
 const port = process.env.PORT;
 
 //import all agents from top-agents.js
-var topAgents = require('./top-agents');
+var data = require('./data');
 
 app.get('/region-avg/:region', (req, res) => {
     //find key:values with specific value
-    let regionSelected = topAgents.filter(r => r.region === req.params.region);
+    let regionSelected = data.topAgents.filter(r => r.region === req.params.region);
     
     if (!regionSelected.length) {
         res.send('No agents were found in the supplied region!')
@@ -23,7 +23,6 @@ app.get('/region-avg/:region', (req, res) => {
     var avgFee = arr.reduce(sumFee).fee / arr.length;
     
     res.send({
-        // region,
         average_rating:avgRating.toFixed(2),
         average_fee:avgFee.toFixed(2)
       });

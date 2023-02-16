@@ -1,51 +1,46 @@
-module.exports = [{
+const topAgents = [
+{
     "first_name":"Orlando",
     "last_name":"Perez",
     "email":"perez@rocket.elv",
     "region":"north",
     "rating":"95",
-    "fee":"10000"  
-},
+    "fee":"10000"},
     {
         "first_name":"Brutus",
         "last_name":"Konway",
         "email":"brutus@rocket.elv",
         "region":"north",
         "rating":"92",
-        "fee":"9000"
-    },
+        "fee":"9000"},
         {
             "first_name":"Bob",
             "last_name":"Boberson",
             "email":"bob@rocket.elv",
             "region":"east",
             "rating":"85",
-            "fee":"10000"
-        },
+            "fee":"10000"},
             {
                 "first_name":"John",
                 "last_name":"Johnson",
                 "email":"john@rocket.elv",
                 "region":"south",
                 "rating":"75",
-                "fee":"8000"
-            },
+                "fee":"8000"},
                 {
                     "first_name":"Jeff",
                     "last_name":"Lebow",
                     "email":"carpet@rocket.elv",
                     "region":"north",
                     "rating":"92",
-                    "fee":"10000"
-                },
+                    "fee":"10000"},
                         {
                             "first_name":"Elmar",
                             "last_name":"Fade",
                             "email":"elmar@rocket.elv",
                             "region":"south",
                             "rating":"95",
-                            "fee":"10000"
-                        },
+                            "fee":"10000"},
                                 {
                                     "first_name":"Zed",
                                     "last_name":"Roles",
@@ -73,9 +68,23 @@ module.exports = [{
                                                             "email":"papi@rocket.elv",
                                                             "region":"south",
                                                             "rating":"100",
-                                                            "fee":"10001"
-                                                    }]
+                                                            "fee":"10001"}
+];
 
-// module.exports = {
-//     topAgents
-// }
+const unitPrices = {
+    standard: 8000,
+    premium: 12000,
+    excelium: 15000,
+};
+                                                      
+const installPercentFees = {
+    standard: .10,
+    premium: .15,
+    excelium: .20,
+};
+
+module.exports = {
+    topAgents,
+    unitPrices,
+    installPercentFees
+}
