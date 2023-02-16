@@ -78,9 +78,9 @@ const unitPrices = {
 };
                                                       
 const installPercentFees = {
-    standard: .10,
-    premium: .15,
-    excelium: .20,
+    standard: 10,
+    premium: 15,
+    excelium: 20,
 };
 
 module.exports = {
