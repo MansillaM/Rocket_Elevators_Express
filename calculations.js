@@ -13,8 +13,10 @@ const calcCommercialElev = (numFloors, maxOccupancy) => {
 const calcInstallFee = (numElvs, tier) => {
   const unitPrice = data.unitPrices[tier];
   const installPercentFees = data.installPercentFees[tier];
-  const total = numElvs * unitPrice * installPercentFees;
-  return total;
+  const totalPriceElev = numElvs * unitPrice;
+  const installFeeCost = (installPercentFees / 100) * totalPriceElev;
+  const price = totalPriceElev + installFeeCost
+  return price;
 }
 
 module.exports = {
