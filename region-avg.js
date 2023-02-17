@@ -7,6 +7,7 @@ const port = process.env.PORT;
 //import all agents from top-agents.js
 var data = require('./data');
 
+//GET method to return average rating and feeds depending on region
 app.get('/region-avg/:region', (req, res) => {
     //find key:values with specific value
     let regionSelected = data.topAgents.filter(r => r.region === req.params.region);

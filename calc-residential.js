@@ -4,10 +4,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-//import all agents from top-agents.js
+//import all agents from top-agents.js and calculation from calculations.js
 var data = require('./data');
 var calc = require('./calculations')
 
+//GET method to return elevator require and total cost based on apt, floor and tier
 app.get('/calc-residential/:numFloor/:numApp/:tier', (req, res) => {
     var numApp = parseInt(req.params.numApp);
     var numFloor = parseInt(req.params.numFloor);
