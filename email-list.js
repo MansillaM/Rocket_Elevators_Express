@@ -13,6 +13,7 @@ for (let a = 0; a < data.topAgents.length; a++) {
     text += data.topAgents[a].email + ", ";
 };
 
+//GET method to return every email from agents
 app.get('/email-list', (req, res) => {
     res.send(text)
 });

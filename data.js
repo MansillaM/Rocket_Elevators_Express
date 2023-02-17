@@ -1,3 +1,4 @@
+//Data from all agents
 const topAgents = [
 {
     "first_name":"Orlando",
@@ -71,18 +72,21 @@ const topAgents = [
                                                             "fee":"10001"}
 ];
 
+//variable for price of tier
 const unitPrices = {
     standard: 8000,
     premium: 12000,
     excelium: 15000,
 };
-                                                      
+                  
+//variable for percent fees
 const installPercentFees = {
     standard: 10,
     premium: 15,
     excelium: 20,
 };
 
+//export variables
 module.exports = {
     topAgents,
     unitPrices,

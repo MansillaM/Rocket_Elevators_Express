@@ -4,6 +4,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
+//GET method to return status of server
 app.get('/status', (req, res) => {
     const envName = process.env.NODE_ENV;
     const message = `Environment '${envName}' running on port: ${port}`;

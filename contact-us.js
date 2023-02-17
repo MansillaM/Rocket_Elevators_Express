@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT;
 app.use(express.json());
 
+//POST method for the contact us form
 app.post('/contact-us', (req, res) => {
     const firstName = req.body.first_name;
     const lastName = req.body.last_name;
